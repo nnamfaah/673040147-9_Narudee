@@ -3,52 +3,41 @@ Narudee Chakitdee
 673040147-9
 Lab4-1 P1
 """
-from datetime import datetime
+from cat import Cat
+from datetime import datetime, timedelta
 
-class Cat:
-    # Class attribute
-    count = 0
+# Add 3 cats
+cat1 = Cat("Navy", "Maine Coon", 1, "Ai")
+cat2 = Cat("Ivory", "Persian", 2, "Bell")
+cat3 = Cat("Ruby", "Birman", 2, "Chacha")
 
-    def __init__(self, in_name="N/A", in_breed="Unknown", in_age="Unknown", in_owner="N/A"):
-        self.name = in_name
-        self.breed = in_breed
-        self.age = in_age
-        self.owner = in_owner
-        Cat.count += 1
+# For the first cat
+print(f"1st Cate Date In: {cat1.get_time_in()}") # show date_in
+cat1.greet() # Let the cat greets you
 
-        self.last_date_in = datetime.now()
-        self.last_date_out = None
-    
-    # Instance methods
-    def print_cat(self):
-        print(f"----- Cat Record -----")
-        print(f"Name: {self.name}")
-        print(f"Breed: {self.breed}")
-        print(f"Owner: {self.owner}")
-        print(f"Age: {self.age}")
-        print(">>>> Treatment record")
-        print(f">>>> Last in: {self.last_date_in}")
-        print(f">>>> Last out: {self.last_date_out}")
-        print(f"----- End record -----")
+# For the second cat
+print(f"2nd Cate Date Out: {cat2.get_time_out()}") # show date_out
+# Change the date_out to be +2 days from now
+new_date_out = datetime.now() + timedelta(days=2)
+cat2.set_time_out(new_date_out)
+# Show the date_out again
+print(f"2nd Cate Date Out: {cat2.get_time_out()}") # show date_out (+2)
 
+# For the third cat
+cat3.owner = "Namfah" # Change name
+cat3.age = 3 # Change age
 
-    def greet(self):
-        print(f"Meaw~ {self.name} =^.^=")
+# Show the details of all 3 cats
+cat1.print_cat()
+cat2.print_cat()
+cat3.print_cat()
 
-    def get_time_in(self):
-        return self.last_date_in
-    
-    def get_time_out(self):
-        return self.last_date_out
-    
-    def set_time_out(self, time=datetime.now()):
-        self.last_date_out = time
+# Show the total number of cats in the class Cat so far
+print(f"Total number of cats in the class Cat so far : {Cat.get_num()}")
 
-    # Class methods
-    @classmethod
-    def get_num(cls):
-        return cls.count
-    
-    @classmethod
-    def reset_cat(cls):
-        cls.count = 0
+# Reset the number of cats in the class Cat
+Cat.reset_cat()
+print("Cat number in the class Cat has been reset.")
+
+# Show the total number of cats in the class Cat again (should be 0)
+print(f"Total number of cats in the class Cat after reset: {Cat.get_num()}")
