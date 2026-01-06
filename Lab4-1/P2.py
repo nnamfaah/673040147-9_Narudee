@@ -3,7 +3,7 @@ Narudee Chakitdee
 673040147-9
 Lab4-1 P2
 """
-from banck_acc import BankAccount
+from bank_acc import BankAccount
 
 john = BankAccount("John", "saving", 500)
 tim = BankAccount("Tim", "loan", -1000000)
