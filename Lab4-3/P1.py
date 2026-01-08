@@ -45,7 +45,7 @@ class Book(LibraryItem):
         self.pages_count = pages
 
     def display_info(self):
-        if self.check_out():
+        if self._checked_out:
             status = "Checked Out"
         else:
             status = "Avaliable"
