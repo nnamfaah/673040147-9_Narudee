@@ -1,3 +1,9 @@
+"""
+Narudee Chakitdee
+673040147-9
+Lab4 P1
+"""
+
 from room import Room, Bedroom, Kitchen
 
 if __name__ == "__main__":
