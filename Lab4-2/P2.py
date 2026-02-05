@@ -102,3 +102,5 @@ def is_senior(age):
 @staticmethod
 def calculate_healthy_food_amount(weight):
     return weight * 20
+
+
