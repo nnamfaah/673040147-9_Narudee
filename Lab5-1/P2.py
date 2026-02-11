@@ -80,6 +80,9 @@ class StudentRegistration(QWidget):
         
         main_layout.addLayout(radio_layout)
         
+        # Add spacing between widgets
+        main_layout.addSpacing(20)
+        
         # Program
         main_layout.addWidget(QLabel("Program:"))
         self.program_combo = QComboBox()
@@ -149,7 +152,7 @@ class CustomButton(QPushButton):
         self.clicked.connect(self.handle_click)
     
     def handle_click(self):
-        print("Submit Registration button clicked")
+        print("Submit Registration")
 
 
 class MainWindow(QMainWindow):
