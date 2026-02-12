@@ -9,7 +9,6 @@ from PySide6.QtWidgets import (
     QPushButton, QCheckBox, QVBoxLayout, QHBoxLayout, QFrame
 )
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
 
 class LoginUIwindow(QWidget):
     def __init__(self):
