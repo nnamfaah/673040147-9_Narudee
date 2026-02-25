@@ -1,0 +1,21 @@
+# Format: Month, Amount, Category
+Jan, 15000, Electronics
+Jan, 8000, Clothing
+Feb, 12000, Food
+Feb, 9500, Electronics
+Mar, 20000, Electronics
+Mar, 5000, Others
+Apr, 17000, Clothing
+Apr, 11000, Food
+May, 25000, Electronics
+Jun, 13000, Food
+Jun, 8000, Clothing
+Jul, 30000, Electronics
+Aug, 22000, Clothing
+Sep, 18000, Food
+Oct, 27000, Electronics
+Oct, 14000, Others
+Nov, 35000, Electronics
+Nov, 20000, Clothing
+Dec, 40000, Electronics
+Dec, 25000, Food
